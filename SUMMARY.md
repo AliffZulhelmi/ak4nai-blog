@@ -1,0 +1,37 @@
+# Table of contents
+
+* [Welcome to ak4nai's](README.md)
+
+## BlackBerry CTF 2025 <a href="#bbctf2025" id="bbctf2025"></a>
+
+* [Forensics](bbctf2025/forensics.md)
+* [Miscellaneous](bbctf2025/misc.md)
+* [Mobile](bbctf2025/mobile.md)
+
+## UMCS 2025
+
+* [Blockchain](umcs-2025/blockchain.md)
+
+## SSMCTF 2025
+
+* [OSINT](ssmctf-2025/blockchain.md)
+
+## HackTheBox(HTB) <a href="#htb" id="htb"></a>
+
+* [Fluffy](htb/fluffy.md)
+
+***
+
+* [Sauna](sauna.md)
+* [Planning](planning.md)
+* [Nocturnal](nocturnal.md)
+* [Titanic](titanic.md)
+
+## Basics
+
+* [Editor](basics/editor.md)
+* [Markdown](basics/markdown.md)
+* [Images & media](basics/images-and-media.md)
+* [Interactive blocks](basics/interactive-blocks.md)
+* [OpenAPI](basics/openapi.md)
+* [Integrations](basics/integrations.md)
