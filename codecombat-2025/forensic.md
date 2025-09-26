@@ -8,7 +8,7 @@ description: Here are the write-ups for forensic challenges that I solved during
 Aiya. I accidentally deleted the flag when cleaning up my Desktop.
 
 **Flag Format:** SIBER25{flag} 
-**Zip Password:** - 
+**Zip Password:**
 **Challenge Creator:** @identities
 
 ## Solution
