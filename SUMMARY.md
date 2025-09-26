@@ -12,6 +12,12 @@
 
 * [Blockchain](umcs-2025/blockchain.md)
 
+## CYBERDSA 2025: CODE COMBAT
+
+* [Forensic](cyberdsa-2025-code-combat/forensic.md)
+* [AI](cyberdsa-2025-code-combat/ai.md)
+* [Miscellaneous](cyberdsa-2025-code-combat/miscellaneous.md)
+
 ## SSMCTF 2025
 
 * [OSINT](ssmctf-2025/blockchain.md)
