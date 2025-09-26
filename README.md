@@ -6,7 +6,7 @@ coverY: -42.67461139896381
 
 # Welcome to ak4nai's
 
-Hey guys! This is where I drop my 2-cent articles and writeups on the cool stuff I’ve been exploring.
+Hey guys! This is where I drop my 1-cent articles and writeups on the cool stuff I’ve been exploring.
 
 ### Jump right in
 
