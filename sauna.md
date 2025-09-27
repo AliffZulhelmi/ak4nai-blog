@@ -31,7 +31,7 @@ Nothing much here. SMB service is not really useful, signing enabled and require
 
 After dive deep into target website, I find out the list of staff with probability high privileges to the system. I decided to use this information to craft a wordlist of usernames and then try it on target open services.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ### Users Enumeration
 
@@ -50,9 +50,9 @@ I crafted wordlist of usernames with commonly used pattern using [username-anarc
 netexec ldap $dc-ip -u username_wordlist -p '' --asreproast asreproast_output
 ```
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Password Cracking
 
@@ -62,9 +62,9 @@ Based on NTLM hash we got from NXC. I stored it in the file called `fsmith_passh
 john --format=krb5asrep --wordlist=/usr/share/wordlists/rockyou.txt fsmith_passhash
 ```
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Gaining Access
 
@@ -78,7 +78,7 @@ I can leverage this credential on other services, the most prominent service to 
 evil-winrm -i $target-ip -u fsmith -p 'Thestrokes23'
 ```
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Luckily, We got the flag for user.
 
@@ -102,13 +102,13 @@ ls
 /WinPeas.exe domain
 ```
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 After **A LONGGG LONGGG** review of WinPEAS Result, I discovered domain service account cred.
 
 `svc_loanmanager:Moneymakestheworldgoround!`&#x20;
 
-<figure><img src=".gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 We can utilized this cred to gain more information.
 
@@ -122,7 +122,7 @@ I utilized Bloodhound via NXC
 nxc ldap $dc-ip -u 'svc_loanmgr' -p 'Moneymakestheworldgoround!' --bloodhound -c All --dns-server $dc-ip
 ```
 
-<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the command is executed. A zip file is created containing JSON files of OUs, groups, domains and etc.
 

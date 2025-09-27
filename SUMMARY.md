@@ -42,3 +42,7 @@
 * [Interactive blocks](basics/interactive-blocks.md)
 * [OpenAPI](basics/openapi.md)
 * [Integrations](basics/integrations.md)
+
+## Group 1
+
+* [HOLMES CTF BY HTB](group-1/holmes-ctf-by-htb.md)
