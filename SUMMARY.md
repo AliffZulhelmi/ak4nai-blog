@@ -2,6 +2,10 @@
 
 * [Welcome to ak4nai's](README.md)
 
+## HTB HOLMES CTF 2025: BLUE TEAM
+
+* [The Card \[Easy\]](htb-holmes-ctf-2025-blue-team/the-card-easy.md)
+
 ## BlackBerry CTF 2025 <a href="#bbctf2025" id="bbctf2025"></a>
 
 * [Forensics](bbctf2025/forensics.md)
@@ -42,7 +46,3 @@
 * [Interactive blocks](basics/interactive-blocks.md)
 * [OpenAPI](basics/openapi.md)
 * [Integrations](basics/integrations.md)
-
-## Group 1
-
-* [HOLMES CTF BY HTB](group-1/holmes-ctf-by-htb.md)

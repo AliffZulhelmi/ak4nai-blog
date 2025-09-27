@@ -1,18 +1,22 @@
-# HOLMES CTF BY HTB
+---
+description: >-
+  Here are the write-ups for blue team challenges that I solved during the
+  competition
+---
 
-## The Card \[Easy]
+# The Card \[Easy]
 
-### Overview
+## Overview
 
 **Description:**
 
 Holmes receives a breadcrumb from Dr. Nicole Vale - fragments from a string of cyber incidents across Cogwork-1. Each lead ends the same way: a digital calling card signed JM.
 
-### Solution
+## Solution
 
 Players required to submit 12 flags to pwn the machine
 
-#### **Flag 1**
+### **Flag 1**
 
 **Question:** Analyze the provided logs and identify what is the first User-Agent used by the attacker against Nicole Vale's honeypot. (string)
 
@@ -22,7 +26,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-#### **Flag 2**
+### **Flag 2**
 
 **Question:** It appears the threat actor deployed a web shell after bypassing the WAF. What is the file name? (filename.ext)
 
@@ -32,7 +36,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 3
+### Flag 3
 
 **Question:** The threat actor also managed to exfiltrate some data. What is the name of the database that was exfiltrated? (filename.ext)
 
@@ -42,7 +46,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 4
+### Flag 4
 
 **Question:** During the attack, a seemingly meaningless string seems to be recurring. Which one is it? (string)
 
@@ -50,7 +54,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I have encountered string "4A4D" multiple times used on name of user-agent, web shell, and dumped file thru out the analysis.
 
-#### Flag 5
+### Flag 5
 
 **Question:** OmniYard-3 (formerly Scotland Yard) has granted you access to its CTI platform. Browse to the first IP:port address and count how many campaigns appear to be linked to the honeypot attack.
 
@@ -62,7 +66,7 @@ Players required to submit 12 flags to pwn the machine
 
 
 
-#### Flag 6
+### Flag 6
 
 **Question:** How many tools and malware in total are linked to the previously identified campaigns? (number)
 
@@ -72,7 +76,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-**Flag 7**
+### **Flag 7**
 
 **Question:** It appears that the threat actor has always used the same malware in their campaigns. What is its SHA-256 hash? (sha-256 hash)
 
@@ -82,7 +86,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 8
+### Flag 8
 
 **Question:** Browse to the second IP:port address and use the CogWork Security Platform to look for the hash and locate the IP address to which the malware connects. (Credentials: nvale/CogworkBurning!)
 
@@ -92,7 +96,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 9
+### Flag 9
 
 **Question:** What is the full path of the file that the malware created to ensure its persistence on systems? (/path/filename.ext)
 
@@ -102,7 +106,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 10
+### Flag 10
 
 **Question:** Finally, browse to the third IP:port address and use the CogNet Scanner Platform to discover additional details about the TA's infrastructure. How many open ports does the server have?
 
@@ -112,7 +116,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 11
+### Flag 11
 
 **Question:** Which organization does the previously identified IP belong to? (string)
 
@@ -122,7 +126,7 @@ Players required to submit 12 flags to pwn the machine
 
 <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-#### Flag 12
+### Flag 12
 
 **Question:** One of the exposed services displays a banner containing a cryptic message. What is it? (string)
 
