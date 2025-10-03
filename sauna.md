@@ -50,7 +50,7 @@ I crafted wordlist of usernames with commonly used pattern using [username-anarc
 netexec ldap $dc-ip -u username_wordlist -p '' --asreproast asreproast_output
 ```
 
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 

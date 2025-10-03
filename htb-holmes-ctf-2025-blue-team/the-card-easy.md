@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-**Description:**
+**Scenario:**
 
 Holmes receives a breadcrumb from Dr. Nicole Vale - fragments from a string of cyber incidents across Cogwork-1. Each lead ends the same way: a digital calling card signed JM.
 
@@ -24,7 +24,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Based on analysis on **access.log** file given. The first suspicious request made by custom user-agent on robots.txt.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Flag 2**
 

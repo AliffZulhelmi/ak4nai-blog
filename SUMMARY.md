@@ -1,10 +1,13 @@
 # Table of contents
 
 * [Welcome to ak4nai's](README.md)
+* [NOTE & CHEATSHEET](note-and-cheatsheet/README.md)
+  * [Windows Event Log Analysis](note-and-cheatsheet/windows-event-log-analysis.md)
 
 ## HTB HOLMES CTF 2025: BLUE TEAM
 
 * [The Card \[Easy\]](htb-holmes-ctf-2025-blue-team/the-card-easy.md)
+* [The Enduring Echo](htb-holmes-ctf-2025-blue-team/the-enduring-echo.md)
 
 ## BlackBerry CTF 2025 <a href="#bbctf2025" id="bbctf2025"></a>
 
