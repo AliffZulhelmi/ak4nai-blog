@@ -3,6 +3,7 @@
 * [Welcome to ak4nai's](README.md)
 * [NOTE & CHEATSHEET](note-and-cheatsheet/README.md)
   * [Windows Event Log Analysis](note-and-cheatsheet/windows-event-log-analysis.md)
+* [CYBER SKILLS LEVEL UP @ IIUM](cyber-skills-level-up-iium.md)
 
 ## HTB HOLMES CTF 2025: BLUE TEAM
 
