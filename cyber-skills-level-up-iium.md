@@ -40,7 +40,9 @@ To find malicious process as requested, we have to get the list of processes fir
 
 **Q7** - Knowing the name of the malware family is essential for correlating the attack with known threats and developing appropriate defenses. What is the name of the malware family?
 
-#### VOL3 PSTREE RESULT
+<details>
+
+<summary>VOL3 PSTREE RESULT</summary>
 
 | **Level** | **PID**  | **PPID** | **ImageFileName**  | **SessionId** | **CreateTime (UTC)** | **Cmd (Command Line)**                                                                                                                                                                                                                                                                                                                                                                                                                                        | **Path**                                                                                                   |
 | --------- | -------- | -------- | ------------------ | ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -154,6 +156,10 @@ To find malicious process as requested, we have to get the list of processes fir
 | \*        | **2416** | 3692     | **net.exe**        | 1             | 2024-07-15 07:00:06  | _\_"C:\Windows\system32\net.exe" use \45.9.74.32@8888\davwwwroot_\_                                                                                                                                                                                                                                                                                                                                                                                           | C:\Windows\system32\net.exe                                                                                |
 | \*        | 6892     | 3692     | conhost.exe        | 1             | 2024-07-15 07:00:03  | ??\C:\Windows\system32\conhost.exe 0x4                                                                                                                                                                                                                                                                                                                                                                                                                        | C:\Windows\system32\conhost.exe                                                                            |
 
+
+
+</details>
+
 ### Chal 2
 
 **Situation** :&#x20;
@@ -166,7 +172,7 @@ Your task is to analyze the provided memory dump to uncover details about the pr
 
 I was given a memory dump which contain volatile data. To complete the investigation, I'm using volatility3 to get the answer.
 
-#### **Q1** : What time was the RAM image acquired according to the suspect system?
+**Q1** : What time was the RAM image acquired according to the suspect system?
 
 `SystemTime 2021-04-30 17:52:19+00:00`
 
@@ -180,18 +186,32 @@ I was given a memory dump which contain volatile data. To complete the investiga
 
 Q4 : How many established network connections were there at the time of acquisition?
 
-
+Answer: 7
 
 Q5 : Which domain name does Chrome have an established network connection with?
 
+<figure><img src=".gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
 
 Q6 : What is the MD5 hash value of the process executable for PID 6988?
 
+`Answer: 0b493d8e26f03ccd2060e0be85f430af`
+
+<figure><img src=".gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
+
 Q7 : Can you identify the word that begins at offset 0x45BE876 and is 6 bytes long?
+
+`Answer: 0x45BE876`
 
 Q8 : What is the creation date and time of the parent process of powershell.exe?
 
+`Answer: 2021-04-30 17:43:08.000000 UTC`
+
 Q9 : What is the full path and name of the last file opened in notepad?
 
+`Answer: accountNum`
+
 Q10 : How long did the suspect use Brave browser? (In Hours) Note: Round to the nearest whole number in hours.
+
+`Answer: 4:01:54.328000`
