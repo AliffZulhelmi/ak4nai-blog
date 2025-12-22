@@ -4,6 +4,11 @@
 * [NOTE & CHEATSHEET](note-and-cheatsheet/README.md)
   * [Windows Event Log Analysis](note-and-cheatsheet/windows-event-log-analysis.md)
 
+## WRITEUP
+
+* [CYBER SKILLS LEVEL UP @ IIUM](writeup/cyber-skills-level-up-iium.md)
+* [HTB UNIVERSITY 2025](writeup/htb-university-2025.md)
+
 ## HTB HOLMES CTF 2025: BLUE TEAM
 
 * [The Card \[Easy\]](htb-holmes-ctf-2025-blue-team/the-card-easy.md)
@@ -39,12 +44,6 @@
 * [Planning](planning.md)
 * [Nocturnal](nocturnal.md)
 * [Titanic](titanic.md)
-* [NET](net.md)
-
-## WRITEUP
-
-* [CYBER SKILLS LEVEL UP @ IIUM](writeup/cyber-skills-level-up-iium.md)
-* [HTB UNIVERSITY 2025](writeup/htb-university-2025.md)
 
 ## Basics
 
