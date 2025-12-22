@@ -16,7 +16,7 @@ You are a forensic investigator at a financial institution, and your SIEM flagge
 
 To find malicious process as requested, we have to get the list of processes first, from this list we can sort which process used or executed by the attacker. We can achieve this using volatility feature ()
 
-<figure><img src=".gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 `Answer: powershell.exe`
 
@@ -190,15 +190,15 @@ Answer: 7
 
 Q5 : Which domain name does Chrome have an established network connection with?
 
-<figure><img src=".gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
 
 Q6 : What is the MD5 hash value of the process executable for PID 6988?
 
 `Answer: 0b493d8e26f03ccd2060e0be85f430af`
 
-<figure><img src=".gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
 
 Q7 : Can you identify the word that begins at offset 0x45BE876 and is 6 bytes long?
 
