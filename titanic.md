@@ -24,9 +24,9 @@ nmap -sC -sV 10.10.11.55
 nano /etc/hosts > add "10.10.11.55    titanic.htb"
 ```
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (24) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Port 22 (SSH) Enumeration
 
@@ -38,7 +38,7 @@ I found nothing here, let's move on.
 
 I discovered 1 subdomain called`dev.titanic.htb`. From my observation, this domain used by developer to store n manage web repositories. Without proper access control, I can access the web source code, config files, important file locations, and credential.&#x20;
 
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption><p>subdomain fuzzing</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (23) (1).png" alt=""><figcaption><p>subdomain fuzzing</p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 

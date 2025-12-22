@@ -24,7 +24,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Based on analysis on **access.log** file given. The first suspicious request made by custom user-agent on robots.txt.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Flag 2**
 
@@ -34,7 +34,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Based on **waf.log,** A rule "WEBSHELL\_DEPLOYMENT" are triggered. The action describe that a **PHP web shell "temp\_4A4D.php" created.**
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 3
 
@@ -44,7 +44,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Based on **waf.log,** A rule "DATABASE\_DOWNLOAD" triggered. The action describe the attacker have downloaded database file "database\_dump\_4A4D.sql" which might store critical data.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 4
 
@@ -62,7 +62,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Based on **CogWork-Intel Graph** platform, there's multiple entities of different category linked to one or another. Using information I got on **honeypot logs** I reviewed, the attacker matched organization "**JM**" profile. This threat actor linked to **5 different campaign.**
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -74,7 +74,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I calculated number of **tools and malware (**&#x73;uch as **MedSys Probe)** linked to **these 5 campaigns (**&#x73;uch as **QuantumCoin Stealer)**.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Flag 7**
 
@@ -84,7 +84,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I inspected all linked malware and identify entities "IoC" that indicates these different malware. All these malware share the same pattern and assigned with SHA-256 hash which is the same on all malware on different campaigns.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 8
 
@@ -94,7 +94,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I open the link given, which is an **Advanced Threat Analysis Platform "CogWork Security"** which have a **HASH Lookup** features, I utilize hash that I found to find where's the malware connected to. Based on the result, the malware connected to a **C2 Infra with IP Addr "74.77.74.77".**
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 9
 
@@ -104,7 +104,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** The detailed analysis on the malware includes behavioral analysis. Behavioral analysis section indicate the malware created a bash file "4a4d\_persistance.sh". The file might contain a script used to establish persistence connection between C2 Infra and victim machine.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 10
 
@@ -114,7 +114,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I open the 3rd link, it's a "CogNet Scanner". I searched for C2 Infra (74.77.74.77) information, and there's multiple information provided including **Overview, Services, Vulnerabilities, and etc.** Under **Services** section, there's a list of services and port opened.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 11
 
@@ -124,7 +124,7 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** Under **Overview** section, **Network Information** also provide the name of organization that IP belongs to.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Flag 12
 
@@ -134,4 +134,4 @@ Players required to submit 12 flags to pwn the machine
 
 **Explanation:** I'm scrolling through services that's open under **Services** section and encounter an unclear message at **7477/tcp port** which can be a cryptic message.
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
