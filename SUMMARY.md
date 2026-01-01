@@ -4,6 +4,10 @@
 * [NOTE & CHEATSHEET](note-and-cheatsheet/README.md)
   * [Windows Event Log Analysis](note-and-cheatsheet/windows-event-log-analysis.md)
 
+## CVE
+
+* [CVE-2025-68613 | n8n RCE](cve/cve-2025-68613-or-n8n-rce.md)
+
 ## WRITEUP
 
 * [CYBER SKILLS LEVEL UP @ IIUM](writeup/cyber-skills-level-up-iium.md)
