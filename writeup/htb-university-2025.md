@@ -77,7 +77,7 @@ URL visited by user often keep inside browser local db. I begin my investigation
 vol.py -r csv -f Challenge-Snapshot.vmem windows.netscan > netscan.csv
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Based on the evidence above, the victim used Chrome to access the URL. As for chrome, its history stored in sqlite db located at `C:\Users<username>\AppData\Local\Google\Chrome\User Data\Default`&#x20;
 
@@ -87,7 +87,7 @@ Then, I scan files that present inside the memory image, we can utilize grep to 
 vol.py -r csv -f Challenge-Snapshot.vmem windows.filescan > files.csv
 ```
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now, I acknowledged that **history db** is present inside the memory image.  We can dump this database using it's virtual addr on the left.
 
@@ -95,7 +95,7 @@ Now, I acknowledged that **history db** is present inside the memory image.  We 
 vol.py -f Challenge-Snapshot.vmem windows.dumpfiles --virtaddr 0xe786d47c1ef0
 ```
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 To ensure that we get a the right file, I confirm the file type from the file header
 
@@ -103,7 +103,7 @@ To ensure that we get a the right file, I confirm the file type from the file he
 xxd file.0xe786d47c1ef0.0xe786d37d7010.DataSectionObject.History.dat | head
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now, we can begin our investigation on our next artifact (history.db)
 
@@ -113,7 +113,7 @@ sqlite3 history.db
 .tables
 ```
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 The db file seems malformed, but we can recover this using sqlite recover feature.
 
@@ -130,7 +130,7 @@ sqlite3 history_recovered.db
 SELECT * FROM urls;
 ```
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 I see the suspicious link accessed by the victim. Which is **http://graveyard.htb:8000.** Now let's identify the timestamp. when the victim download the malicious file.
 
@@ -138,7 +138,7 @@ I see the suspicious link accessed by the victim. Which is **http://graveyard.ht
 SELECT * FROM downloads;
 ```
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Based on **downloads** table, the victim installed a **malicious** application "named" DiscordGiveaway.exe at **13408297643715783.** Chrome history db used a webkit timestamp format to store date n time information. we can convert this value using online converter and get **2025-11-22 15:07:23.**&#x20;
 
