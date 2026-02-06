@@ -1,5 +1,6 @@
 ---
 description: HTB Machine writeup
+icon: linux
 ---
 
 # Conversor
