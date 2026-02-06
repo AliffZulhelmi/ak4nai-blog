@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to ak4nai's](README.md)
+* [HOME PAGE](README.md)
 * [NOTE & CHEATSHEET](note-and-cheatsheet/README.md)
   * [Windows Event Log Analysis](note-and-cheatsheet/windows-event-log-analysis.md)
 
