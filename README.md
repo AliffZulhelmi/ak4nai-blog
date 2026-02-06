@@ -33,4 +33,4 @@ Hey guys! This is where I drop my 1-cent articles and writeups on the cool stuff
 |              Reunion CTF 2025             |          11st          |
 |             TAMiNG ICTFF8 2026            |   10th \[Preliminary]  |
 |         0xCYNX: Operation CTF 2026        |           5th          |
-|                Pascal CTF                 |          284th         |
+|              Pascal CTF 2026              |          284th         |
